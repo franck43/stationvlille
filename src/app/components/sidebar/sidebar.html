@@ -1,3 +1,31 @@
-<button type="button" class="btn btn-default btn-lg" ng-click="sidebar.openAside('left', true)">
-	<span class="glyphicon glyphicon-align-justify"></span> Left
-</button>
+<!--<hamburger-toggle state="sidebar.stateModel" ng-click="sidebar.openAside('left', true)"></hamburger-toggle>
+sidebar.stateModel: {{sidebar.stateModel}}-->
+<div class="header">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!-- <hamburger-toggle state="sidebar.stateModel" ng-click="sidebar.openAside('left', true)"></hamburger-toggle> -->
+      <hamburger-toggle state="sidebar.stateModel"></hamburger-toggle>
+		<a class="navbar-brand" href="https://github.com/franck43/stationvlille">
+			Stations V'Lille
+		</a>
+    </div>
+  </div>
+</nav>
+</div>
+
+<div class="sidenav" ng-class="{open: sidebar.stateModel}">
+      <ul class="nav nav-pills nav-stacked">
+        <li role="presentation" ng-class="{ active:sidebar.isSet(1) }">
+        	<a ng-click="sidebar.setTab(1)">Home</a>
+        </li>
+        <li role="presentation" ng-class="{ active:sidebar.isSet(2) }">
+        	<a ng-click="sidebar.setTab(2)">Profile</a>
+        </li>
+        <li role="presentation" ng-class="{ active:sidebar.isSet(3) }">
+        	<a ng-click="sidebar.setTab(3)">Messages</a>
+        </li>
+      </ul>
+</div>
+
+

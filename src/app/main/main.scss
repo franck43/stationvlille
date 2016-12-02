@@ -1,0 +1,10 @@
+.content {
+      transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+    }
+    .content.sidenav-open {
+      padding-left: 330px;
+    }
+    .container.panel {
+      min-height: 500px
+    }

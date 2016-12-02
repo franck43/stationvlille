@@ -1,40 +1,36 @@
-/* Styles go here */
 
-body {
-  padding: 30px 15px 0;
+a {
+  color: black;
 }
 
-/* content slide animation */
-/*
-.modal-open #content {
-  -webkit-transition:all .2s, -webkit-transform .2s;
-  transition:all .2s ease-out, -webkit-transform .2s
-}
-.modal-open.left #content {
-  transform: translate(320px, 0);
-}
-*/
-
-#downloadbtn {
-  margin-bottom: 10px;
+h1 {
+  font-size: 2em;
+  margin: 0;
+  line-height: 1.25em;
 }
 
-.about-links {
-  color: #95a5a6;
-}
-.about-links a {
-  border-bottom: 1px dotted;
-  text-decoration: none;
-  margin-right: 15px;
+a:hover, a:focus {
+  color: greenyellow;
 }
 
-.about-links li {line-height: 30px;}
-.about-links li:hover, .about-links li:hover a { color: #666; }
-.about-links .love:hover i { color: #e74c3c; }
-.about-links .prospectus:hover i { color: #f39c12; }
-.about-links .cypher:hover i { color: #16a085; }
-.about-links .lab:hover i { color: #8e44ad; }
+.navbar-brand {
+  margin-left: 25px !important;
+}
 
-.ng-aside .modal-content {
-  min-width: 320px;
+.sidenav {
+      width: 0;
+      overflow: hidden;
+      position: fixed;
+      left: 0;
+      top: 65px;
+      bottom: 0;
+      transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+       box-shadow: 0 8px 17px rgba(0,0,0,.2);
+      -webkit-box-shadow: 0 8px 17px rgba(0,0,0,.2);
+      background: #fff;
+      z-index: 10;
+}
+.sidenav.open {
+    width: 300px;
 }
