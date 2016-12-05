@@ -8,6 +8,11 @@
 
 var fs = require('fs');
 var gulp = require('gulp');
+/*var xml2json = require('gulp-xml2json');
+var request = require('request');
+var gutil = require('gulp-util');*/
+
+
 
 /**
  *  This will load all js or coffee files in the gulp directory
@@ -27,3 +32,10 @@ fs.readdirSync('./gulp').filter(function(file) {
 gulp.task('default', ['clean'], function () {
   gulp.start('build');
 });
+
+/*gulp.task('getAndparseToJSON', function() {
+	//request('http://vlille.fr/stations/xml-stations.aspx').pipe(fs.createWriteStream('xml-stations.aspx'));
+	var xml = "<foo attr=\"value\">bar</foo>";
+	var json = xml2json.toJson(xml);
+	gutil.log('stuff happened', json, gutil.colors.magenta('123'));
+});*/
