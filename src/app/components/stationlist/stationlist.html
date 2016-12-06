@@ -1,25 +1,13 @@
-<!--<div class="row">
-        <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
-          <div class="thumbnail">
-            <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
-            <div class="caption">
-              <h3>{{ awesomeThing.title }}</h3>
-              <p>{{ awesomeThing.description }}</p>
-              <p><a ng-href="{{awesomeThing.url}}">{{ awesomeThing.url }}</a></p>
-            </div>
-          </div>
-        </div>
-      </div>-->
-      <div ng-show="!main.stations.$$state.value.list.length"><h4>Charging ...</h4></div>
-      <div class="row">
-        <div class="col-sm-6 col-md-4" ng-repeat="station in main.stations.$$state.value.list ">
-          <div class="thumbnail">
-            <img class="pull-right" ng-src="assets/images/{{station.weather[0].main}}.png" alt="Jasmine">
-            <div class="caption">
-              <h3>{{ station.name}} <small>{{station.weather[0].main}}</small></h3>
-              <p>{{ station.main.temp | number:1}} C°</p>
-              <!--<p><a ng-href="{{station.url}}">{{ station.url }}</a></p>-->
-            </div>
-          </div>
-        </div>
+<div ng-show="!main.stations.$$state.value.list.length"><h4><i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i> Charging ...</h4></div>
+<div class="row">
+  <div class="col-sm-6 col-md-4" ng-repeat="station in main.stations.$$state.value.list ">
+    <div class="thumbnail">
+      <img class="pull-right" ng-src="assets/images/{{station.weather[0].main}}.png" alt="Jasmine">
+      <div class="caption">
+        <h3>{{ station.name}} <small>{{station.weather[0].main}}</small></h3>
+        <p>{{ station.main.temp | number:1}} C°</p>
+        <!--<p><a ng-href="{{station.url}}">{{ station.url }}</a></p>-->
       </div>
+    </div>
+  </div>
+</div>
