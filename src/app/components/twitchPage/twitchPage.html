@@ -1,0 +1,20 @@
+<aside-sidebar state-model="twitchctrl.stateModel" tab-model="twitchctrl.tab"></aside-sidebar>
+
+<div class="content" ng-class="{'sidenav-open': twitchctrl.stateModel}">
+  <div class="container panel">
+  <h1>Twitch Top 100 Games</h1>
+<div ng-show="!twitchctrl.games.$$state.value.top.length"><h4><i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i> Charging ...</h4></div>
+
+<div class="row">
+  <div class="col-sm-6 col-md-4" ng-repeat="game in twitchctrl.games.$$state.value.top">
+    <div class="thumbnail">
+      <img class="pull-right" ng-src="{{game.game.box.large}}" alt="Jasmine">
+      <div class="caption">
+        <h3>{{ game.game.name}}</h3>
+        <p>{{game.channels}} channels</p>
+        <p>{{game.viewers}} Views</p>
+        <!--<p><a ng-href="{{station.url}}">{{ station.url }}</a></p>-->
+      </div>
+    </div>
+  </div>
+</div>

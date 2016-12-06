@@ -31,6 +31,12 @@
         templateUrl: 'app/components/meteoPage/meteoPage.html',
         controller: 'MeteoController',
         controllerAs: 'meteoctrl'
+      })
+      .state('twitch', {
+        url: '/twitchPage',
+        templateUrl: 'app/components/twitchPage/twitchPage.html',
+        controller: 'TwitchController',
+        controllerAs: 'twitchctrl'
       });
 
     $urlRouterProvider.otherwise('/');
