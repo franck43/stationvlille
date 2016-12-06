@@ -7,7 +7,7 @@ sidebar.stateModel: {{sidebar.stateModel}}-->
       <!-- <hamburger-toggle state="sidebar.stateModel" ng-click="sidebar.openAside('left', true)"></hamburger-toggle> -->
       <hamburger-toggle state="sidebar.stateModel"></hamburger-toggle>
 		<a class="navbar-brand" href="https://github.com/franck43/stationvlille">
-			App'end
+			App'name
 		</a>
     </div>
   </div>
@@ -17,13 +17,13 @@ sidebar.stateModel: {{sidebar.stateModel}}-->
 <div class="sidenav" ng-class="{open: sidebar.stateModel}">
       <ul class="nav nav-pills nav-stacked">
         <li role="presentation" ng-class="{ active:sidebar.isSet(1) }">
-        	<a ng-click="sidebar.setTab(1)">Home</a>
+        	<a href="#/statemodel/true" ng-click="sidebar.setTab(1)">Home</a>
         </li>
         <li role="presentation" ng-class="{ active:sidebar.isSet(2) }">
-        	<a ng-click="sidebar.setTab(2)">Meteo</a>
+        	<a href="#meteoPage" ng-click="sidebar.setTab(2)">Meteo</a>
         </li>
         <li role="presentation" ng-class="{ active:sidebar.isSet(3) }">
-        	<a ng-click="sidebar.setTab(3)">Carrousel</a>
+        	<a href="#carouselPage" ng-click="sidebar.setTab(3)">Carrousel</a>
         </li>
       </ul>
 </div>

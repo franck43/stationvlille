@@ -37,6 +37,7 @@
     vm.classAnimation = '';
     vm.creationDate = 1480536646119;
     vm.showToastr = showToastr;
+    
     vm.stateModel = false;
     vm.tab = 1;
     vm.tabIsSet = tabIsSet;

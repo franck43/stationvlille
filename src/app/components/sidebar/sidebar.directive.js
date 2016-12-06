@@ -22,7 +22,7 @@
     return directive;
 
     /** @ngInject */
-    function SidebarController() {
+    function SidebarController($log) {
       var vm = this;
       //vm.stateModel = false;
 
@@ -31,7 +31,10 @@
 
       vm.setTab = setTab;
 
+
       function isSet(checkTab) {
+        $log.log("doing isSet()");
+        //vm.stateModel = true;
         return vm.tabModel === checkTab;
       }
 

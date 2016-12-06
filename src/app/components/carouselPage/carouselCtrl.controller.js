@@ -8,6 +8,8 @@
   /** @ngInject */
   function CrlController($log) {
     var vm = this;
+    vm.tab = 3;
+    vm.stateModel = true;
     $log.log("Launching Carousel Controller");
     vm.slides = [
       {
@@ -23,6 +25,5 @@
         image: "img1.png"
       }
     ];
-   
   }
 })();

@@ -1,0 +1,19 @@
+<aside-sidebar state-model="meteoctrl.stateModel" tab-model="meteoctrl.tab"></aside-sidebar>
+
+<div class="content" ng-class="{'sidenav-open': meteoctrl.stateModel}">
+  <div class="container panel">
+  <h1>Meteo</h1>
+<div ng-show="!meteoctrl.stations.$$state.value.list.length"><h4><i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i> Charging ...</h4></div>
+
+<div class="row">
+  <div class="col-sm-6 col-md-4" ng-repeat="station in meteoctrl.stations.$$state.value.list ">
+    <div class="thumbnail">
+      <img class="pull-right" ng-src="assets/images/{{station.weather[0].main}}.png" alt="Jasmine">
+      <div class="caption">
+        <h3>{{ station.name}} <small>{{station.weather[0].main}}</small></h3>
+        <p>{{ station.main.temp | number:1}} C°</p>
+        <!--<p><a ng-href="{{station.url}}">{{ station.url }}</a></p>-->
+      </div>
+    </div>
+  </div>
+</div>
